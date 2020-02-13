@@ -1,0 +1,26 @@
+///*
+// * External_Interrupts.c
+// *
+// *  Created on: Feb 12, 2020
+// *      Author: Youssef Harby
+// */
+//
+//
+//#include "avr/interrupt.h"
+//#include "timers.h"
+//
+//volatile uint8_t ext2_flag = 0;
+//
+//ISR(INT2_vect)
+//{
+//	ext2_flag++;
+//
+//	if(ext2_flag == 1)
+//	{
+//		timer1Start();
+//	}else if(ext2_flag == 2)
+//	{
+//		timer1Stop();
+//		ext2_flag = 0;
+//	}
+//}

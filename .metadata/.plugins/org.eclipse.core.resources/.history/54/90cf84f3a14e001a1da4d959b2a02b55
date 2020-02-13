@@ -1,0 +1,34 @@
+/*
+ * main.c
+ *
+ *  Created on: Feb 13, 2020
+ *      Author: Youssef harby
+ */
+
+
+#include "stdio.h"
+#include "string.h"
+
+unsigned char stringToInteger(unsigned char* str)
+{
+	int i;
+	unsigned char size = strlen(str);
+	unsigned char num = 0;
+
+	for(i=0 ; i<size ; i++)
+	{
+		num = num * 10 + str[i];
+	}
+
+	return num;
+}
+
+int main(void)
+{
+	unsigned char* str = "430";
+	unsigned char ex= stringToInteger(str);
+
+	printf("%d", ex);
+
+	return 0;
+}

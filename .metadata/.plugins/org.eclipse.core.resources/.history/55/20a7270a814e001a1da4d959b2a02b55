@@ -1,0 +1,127 @@
+/*
+ * VSE_main.c
+ *
+ *  Created on: Feb 13, 2020
+ *      Author: Youssef Harby
+ */
+
+
+#include "gpio.h"
+#include "LCD.h"
+#include "pushButton.h"
+#include "SPI.h"
+#include "UART.h"
+#include "led.h"
+#include "timers.h"
+
+uint8_t flag = 0;
+uint8_t currentSpeed;
+
+void test(void)
+{
+	flag = 1;
+}
+
+void test_uart(void)
+{
+	currentSpeed = UART_receive();
+
+	LCD_clearScreen();
+	LCD_goToRowColumn(0, 0);
+	LCD_displayInteger(currentSpeed);
+}
+
+int main(void)
+{
+	UART_ConfigType uart_configtype = {
+			UART_ASYNCHRONOUS_MODE,
+			UART_RECEIVER_MODE,
+			UART_EIGHT_BITS,
+			UART_PARITY_DISABLED,
+			UART_ONE_STOP_BIT,
+			UART_INTERRUPT_DISABLED
+	};
+
+//	UART_RXC_setCallBack(&test_uart);
+
+	UART_init(&uart_configtype);
+
+	LCD_init();
+
+//	sei();
+
+	while(1)
+	{
+		test_uart();
+	}
+
+
+//	uint8_t alreadyStartedFlag = 0;
+//
+//	pushButtonInit(BTN_0);
+//	pushButtonInit(BTN_1);
+//
+//	UART_ConfigType uart_configtype = {
+//			UART_ASYNCHRONOUS_MODE,
+//			UART_RECEIVER_MODE,
+//			UART_EIGHT_BITS,
+//			UART_PARITY_DISABLED,
+//			UART_ONE_STOP_BIT,
+//			UART_INTERRUPT_ENABLED
+//	};
+//
+//	SPI_ConfigType spi_configtype = {
+//			SPI_MASTER,
+//			SPI_INTERRUPT_DISABLED,
+//			SPI_F_OSC_4
+//	};
+//
+//	UART_RXC_setCallBack(&test_uart);
+//
+//	UART_init(&uart_configtype);
+//	SPI_init(&spi_configtype);
+//
+//	gpioPinDirection(GPIOC, BIT0 | BIT1, INPUT);
+//	gpioPinWrite(GPIOC, BIT0 | BIT1, HIGH);
+//
+//	timer1Init(T1_COMP_MODE_OCR1A_TOP, T1_OC1_DIS, T1_PRESCALER_256, 0, 62500, 0, 0, T1_INTERRUPT_CMP_1A);
+//
+//	Timer1_CTC_A_setCallBack(&test);
+//
+//	sei();
+//
+//	while(1)
+//	{
+//		if(gpioPinRead(GPIOC, BIT0) == 1 && alreadyStartedFlag == 0)
+//		{
+//			timer1Start();
+//			SPI_sendByte(currentSpeed);
+//			alreadyStartedFlag = 1;
+//		}
+//
+//		if(gpioPinRead(GPIOC, BIT1) == 1)
+//		{
+//			timer1Stop();
+//			alreadyStartedFlag = 0;
+//		}
+//
+//		if(pushButtonGetStatus(BTN_0) == Pressed)
+//		{
+//			while(pushButtonGetStatus(BTN_0) == Pressed);
+//			currentSpeed++;
+//		}
+//
+//		if(pushButtonGetStatus(BTN_1) == Pressed)
+//		{
+//			while(pushButtonGetStatus(BTN_1) == Pressed);
+//			currentSpeed--;
+//		}
+//
+//		if(flag == 1)
+//		{
+//			SPI_sendByte(currentSpeed);
+//			flag = 0;
+//		}
+//	}
+}
+

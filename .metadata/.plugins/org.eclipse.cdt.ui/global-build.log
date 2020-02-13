@@ -1,0 +1,1978 @@
+23:19:35 **** Clean-only build of configuration Debug for project VSE_ECU_MASTER ****
+make clean 
+rm -rf  VSE_ECU_MASTER.hex  ./LCD.o ./SPI.o ./UART.o ./VSE_main.o ./gpio.o ./led.o ./pushButton.o ./timers.o  sizedummy  VSE_ECU_MASTER.lss  ./LCD.d ./SPI.d ./UART.d ./VSE_main.d ./gpio.d ./led.d ./pushButton.d ./timers.d  VSE_ECU_MASTER.elf
+ 
+23:19:35 **** Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+Finished building: ../LCD.c
+ 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building file: ../SPI.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"SPI.d" -MT"SPI.o" -c -o "SPI.o" "../SPI.c"
+Finished building: ../SPI.c
+ 
+Building file: ../UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"UART.d" -MT"UART.o" -c -o "UART.o" "../UART.c"
+Finished building: ../UART.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../pushButton.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"pushButton.d" -MT"pushButton.o" -c -o "pushButton.o" "../pushButton.c"
+Finished building: ../pushButton.c
+ 
+Building file: ../timers.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"timers.d" -MT"timers.o" -c -o "timers.o" "../timers.c"
+Finished building: ../timers.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15432 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:         83 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:19:37 **** Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+Finished building: ../LCD.c
+ 
+Building file: ../SPI.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"SPI.d" -MT"SPI.o" -c -o "SPI.o" "../SPI.c"
+Finished building: ../SPI.c
+ 
+Building file: ../UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"UART.d" -MT"UART.o" -c -o "UART.o" "../UART.c"
+Finished building: ../UART.c
+ 
+Building file: ../VSE_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"VSE_main.d" -MT"VSE_main.o" -c -o "VSE_main.o" "../VSE_main.c"
+Finished building: ../VSE_main.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../led.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"led.d" -MT"led.o" -c -o "led.o" "../led.c"
+Finished building: ../led.c
+ 
+Building file: ../pushButton.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"pushButton.d" -MT"pushButton.o" -c -o "pushButton.o" "../pushButton.c"
+Finished building: ../pushButton.c
+ 
+Building file: ../timers.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"timers.d" -MT"timers.o" -c -o "timers.o" "../timers.c"
+Finished building: ../timers.c
+ 
+Building target: VSE_ECU_MASTER.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,VSE_ECU_MASTER.map -mmcu=atmega32 -o "VSE_ECU_MASTER.elf"  ./LCD.o ./SPI.o ./UART.o ./VSE_main.o ./gpio.o ./led.o ./pushButton.o ./timers.o   
+Finished building target: VSE_ECU_MASTER.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S VSE_ECU_MASTER.elf  >"VSE_ECU_MASTER.lss"
+Finished building: VSE_ECU_MASTER.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex VSE_ECU_MASTER.elf  "VSE_ECU_MASTER.hex"
+Finished building: VSE_ECU_MASTER.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         51 bytes (2.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:19:51 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15432 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:         83 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:19:51 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         51 bytes (2.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:20:08 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15432 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:         82 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:20:09 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         51 bytes (2.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:21:42 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15432 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:         82 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:21:43 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         51 bytes (2.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:21:47 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15432 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:21:47 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         51 bytes (2.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:22:19 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+../M_main.c: In function 'test':
+../M_main.c:27: error: 'distance' undeclared (first use in this function)
+../M_main.c:27: error: (Each undeclared identifier is reported only once
+../M_main.c:27: error: for each function it appears in.)
+../M_main.c: In function 'main':
+../M_main.c:68: error: 'distance' undeclared (first use in this function)
+make: *** [M_main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+23:22:19 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         51 bytes (2.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:22:32 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15432 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:22:33 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         51 bytes (2.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:23:58 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+../M_main.c: In function 'main':
+../M_main.c:88: error: 'str' undeclared (first use in this function)
+../M_main.c:88: error: (Each undeclared identifier is reported only once
+../M_main.c:88: error: for each function it appears in.)
+make: *** [M_main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+23:23:59 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         51 bytes (2.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:24:33 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15432 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:24:33 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         51 bytes (2.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:26:35 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15432 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:26:35 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Building file: ../VSE_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"VSE_main.d" -MT"VSE_main.o" -c -o "VSE_main.o" "../VSE_main.c"
+Finished building: ../VSE_main.c
+ 
+Building target: VSE_ECU_MASTER.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,VSE_ECU_MASTER.map -mmcu=atmega32 -o "VSE_ECU_MASTER.elf"  ./LCD.o ./SPI.o ./UART.o ./VSE_main.o ./gpio.o ./led.o ./pushButton.o ./timers.o   
+Finished building target: VSE_ECU_MASTER.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S VSE_ECU_MASTER.elf  >"VSE_ECU_MASTER.lss"
+Finished building: VSE_ECU_MASTER.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex VSE_ECU_MASTER.elf  "VSE_ECU_MASTER.hex"
+Finished building: VSE_ECU_MASTER.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:28:00 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15432 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:28:01 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Building file: ../VSE_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"VSE_main.d" -MT"VSE_main.o" -c -o "VSE_main.o" "../VSE_main.c"
+Finished building: ../VSE_main.c
+ 
+Building target: VSE_ECU_MASTER.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,VSE_ECU_MASTER.map -mmcu=atmega32 -o "VSE_ECU_MASTER.elf"  ./LCD.o ./SPI.o ./UART.o ./VSE_main.o ./gpio.o ./led.o ./pushButton.o ./timers.o   
+Finished building target: VSE_ECU_MASTER.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S VSE_ECU_MASTER.elf  >"VSE_ECU_MASTER.lss"
+Finished building: VSE_ECU_MASTER.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex VSE_ECU_MASTER.elf  "VSE_ECU_MASTER.hex"
+Finished building: VSE_ECU_MASTER.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:29:16 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15432 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:29:16 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Building file: ../VSE_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"VSE_main.d" -MT"VSE_main.o" -c -o "VSE_main.o" "../VSE_main.c"
+Finished building: ../VSE_main.c
+ 
+Building target: VSE_ECU_MASTER.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,VSE_ECU_MASTER.map -mmcu=atmega32 -o "VSE_ECU_MASTER.elf"  ./LCD.o ./SPI.o ./UART.o ./VSE_main.o ./gpio.o ./led.o ./pushButton.o ./timers.o   
+Finished building target: VSE_ECU_MASTER.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S VSE_ECU_MASTER.elf  >"VSE_ECU_MASTER.lss"
+Finished building: VSE_ECU_MASTER.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex VSE_ECU_MASTER.elf  "VSE_ECU_MASTER.hex"
+Finished building: VSE_ECU_MASTER.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:32:23 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+../M_main.c: In function 'main':
+../M_main.c:87: error: 'value' undeclared (first use in this function)
+../M_main.c:87: error: (Each undeclared identifier is reported only once
+../M_main.c:87: error: for each function it appears in.)
+../M_main.c:32: warning: unused variable 'au8_value'
+make: *** [M_main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+23:32:23 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Building file: ../VSE_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"VSE_main.d" -MT"VSE_main.o" -c -o "VSE_main.o" "../VSE_main.c"
+Finished building: ../VSE_main.c
+ 
+Building target: VSE_ECU_MASTER.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,VSE_ECU_MASTER.map -mmcu=atmega32 -o "VSE_ECU_MASTER.elf"  ./LCD.o ./SPI.o ./UART.o ./VSE_main.o ./gpio.o ./led.o ./pushButton.o ./timers.o   
+Finished building target: VSE_ECU_MASTER.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S VSE_ECU_MASTER.elf  >"VSE_ECU_MASTER.lss"
+Finished building: VSE_ECU_MASTER.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex VSE_ECU_MASTER.elf  "VSE_ECU_MASTER.hex"
+Finished building: VSE_ECU_MASTER.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:32:33 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15432 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:32:34 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:33:13 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15432 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:33:14 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:35:36 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15458 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:35:37 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:37:11 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15456 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:37:12 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:37:18 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15456 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:37:19 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:40:23 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15458 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:40:24 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:41:11 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15456 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:41:12 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:42:28 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15458 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         82 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:42:29 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:43:29 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15460 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         82 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:43:30 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:44:16 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15436 bytes (47.1% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:44:17 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:45:54 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15458 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:45:55 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:46:33 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15456 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:46:34 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:47:05 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15456 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:47:06 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:48:01 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15456 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:48:01 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Building file: ../VSE_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"VSE_main.d" -MT"VSE_main.o" -c -o "VSE_main.o" "../VSE_main.c"
+Finished building: ../VSE_main.c
+ 
+Building target: VSE_ECU_MASTER.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,VSE_ECU_MASTER.map -mmcu=atmega32 -o "VSE_ECU_MASTER.elf"  ./LCD.o ./SPI.o ./UART.o ./VSE_main.o ./gpio.o ./led.o ./pushButton.o ./timers.o   
+Finished building target: VSE_ECU_MASTER.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S VSE_ECU_MASTER.elf  >"VSE_ECU_MASTER.lss"
+Finished building: VSE_ECU_MASTER.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex VSE_ECU_MASTER.elf  "VSE_ECU_MASTER.hex"
+Finished building: VSE_ECU_MASTER.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:48:39 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15456 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:48:39 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Building file: ../VSE_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"VSE_main.d" -MT"VSE_main.o" -c -o "VSE_main.o" "../VSE_main.c"
+Finished building: ../VSE_main.c
+ 
+Building target: VSE_ECU_MASTER.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,VSE_ECU_MASTER.map -mmcu=atmega32 -o "VSE_ECU_MASTER.elf"  ./LCD.o ./SPI.o ./UART.o ./VSE_main.o ./gpio.o ./led.o ./pushButton.o ./timers.o   
+Finished building target: VSE_ECU_MASTER.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S VSE_ECU_MASTER.elf  >"VSE_ECU_MASTER.lss"
+Finished building: VSE_ECU_MASTER.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex VSE_ECU_MASTER.elf  "VSE_ECU_MASTER.hex"
+Finished building: VSE_ECU_MASTER.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15724 bytes (48.0% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:49:41 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15456 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:49:41 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Building file: ../VSE_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"VSE_main.d" -MT"VSE_main.o" -c -o "VSE_main.o" "../VSE_main.c"
+Finished building: ../VSE_main.c
+ 
+Building target: VSE_ECU_MASTER.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,VSE_ECU_MASTER.map -mmcu=atmega32 -o "VSE_ECU_MASTER.elf"  ./LCD.o ./SPI.o ./UART.o ./VSE_main.o ./gpio.o ./led.o ./pushButton.o ./timers.o   
+Finished building target: VSE_ECU_MASTER.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S VSE_ECU_MASTER.elf  >"VSE_ECU_MASTER.lss"
+Finished building: VSE_ECU_MASTER.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex VSE_ECU_MASTER.elf  "VSE_ECU_MASTER.hex"
+Finished building: VSE_ECU_MASTER.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15724 bytes (48.0% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:50:09 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15456 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:50:09 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Building file: ../VSE_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"VSE_main.d" -MT"VSE_main.o" -c -o "VSE_main.o" "../VSE_main.c"
+Finished building: ../VSE_main.c
+ 
+Building target: VSE_ECU_MASTER.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,VSE_ECU_MASTER.map -mmcu=atmega32 -o "VSE_ECU_MASTER.elf"  ./LCD.o ./SPI.o ./UART.o ./VSE_main.o ./gpio.o ./led.o ./pushButton.o ./timers.o   
+Finished building target: VSE_ECU_MASTER.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S VSE_ECU_MASTER.elf  >"VSE_ECU_MASTER.lss"
+Finished building: VSE_ECU_MASTER.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex VSE_ECU_MASTER.elf  "VSE_ECU_MASTER.hex"
+Finished building: VSE_ECU_MASTER.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15724 bytes (48.0% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:52:41 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15456 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:52:41 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Building file: ../VSE_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"VSE_main.d" -MT"VSE_main.o" -c -o "VSE_main.o" "../VSE_main.c"
+Finished building: ../VSE_main.c
+ 
+Building target: VSE_ECU_MASTER.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,VSE_ECU_MASTER.map -mmcu=atmega32 -o "VSE_ECU_MASTER.elf"  ./LCD.o ./SPI.o ./UART.o ./VSE_main.o ./gpio.o ./led.o ./pushButton.o ./timers.o   
+Finished building target: VSE_ECU_MASTER.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S VSE_ECU_MASTER.elf  >"VSE_ECU_MASTER.lss"
+Finished building: VSE_ECU_MASTER.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex VSE_ECU_MASTER.elf  "VSE_ECU_MASTER.hex"
+Finished building: VSE_ECU_MASTER.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15724 bytes (48.0% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:53:51 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15456 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:53:51 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Building file: ../VSE_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"VSE_main.d" -MT"VSE_main.o" -c -o "VSE_main.o" "../VSE_main.c"
+Finished building: ../VSE_main.c
+ 
+Building target: VSE_ECU_MASTER.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,VSE_ECU_MASTER.map -mmcu=atmega32 -o "VSE_ECU_MASTER.elf"  ./LCD.o ./SPI.o ./UART.o ./VSE_main.o ./gpio.o ./led.o ./pushButton.o ./timers.o   
+Finished building target: VSE_ECU_MASTER.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S VSE_ECU_MASTER.elf  >"VSE_ECU_MASTER.lss"
+Finished building: VSE_ECU_MASTER.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex VSE_ECU_MASTER.elf  "VSE_ECU_MASTER.hex"
+Finished building: VSE_ECU_MASTER.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15724 bytes (48.0% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:54:30 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15456 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:54:31 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Building file: ../VSE_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"VSE_main.d" -MT"VSE_main.o" -c -o "VSE_main.o" "../VSE_main.c"
+Finished building: ../VSE_main.c
+ 
+Building target: VSE_ECU_MASTER.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,VSE_ECU_MASTER.map -mmcu=atmega32 -o "VSE_ECU_MASTER.elf"  ./LCD.o ./SPI.o ./UART.o ./VSE_main.o ./gpio.o ./led.o ./pushButton.o ./timers.o   
+Finished building target: VSE_ECU_MASTER.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S VSE_ECU_MASTER.elf  >"VSE_ECU_MASTER.lss"
+Finished building: VSE_ECU_MASTER.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex VSE_ECU_MASTER.elf  "VSE_ECU_MASTER.hex"
+Finished building: VSE_ECU_MASTER.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15724 bytes (48.0% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:55:51 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15456 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         81 bytes (4.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+23:55:51 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Building file: ../VSE_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"VSE_main.d" -MT"VSE_main.o" -c -o "VSE_main.o" "../VSE_main.c"
+Finished building: ../VSE_main.c
+ 
+Building target: VSE_ECU_MASTER.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,VSE_ECU_MASTER.map -mmcu=atmega32 -o "VSE_ECU_MASTER.elf"  ./LCD.o ./SPI.o ./UART.o ./VSE_main.o ./gpio.o ./led.o ./pushButton.o ./timers.o   
+Finished building target: VSE_ECU_MASTER.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S VSE_ECU_MASTER.elf  >"VSE_ECU_MASTER.lss"
+Finished building: VSE_ECU_MASTER.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex VSE_ECU_MASTER.elf  "VSE_ECU_MASTER.hex"
+Finished building: VSE_ECU_MASTER.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+00:02:36 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15502 bytes (47.3% Full)
+(.text + .data + .bootloader)
+
+Data:        119 bytes (5.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+00:02:37 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+00:03:35 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15468 bytes (47.2% Full)
+(.text + .data + .bootloader)
+
+Data:         85 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+00:03:36 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+00:04:19 **** Incremental Build of configuration Debug for project MEASUREMENT_ECU_SLAVE ****
+make all 
+Building file: ../M_main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"M_main.d" -MT"M_main.o" -c -o "M_main.o" "../M_main.c"
+Finished building: ../M_main.c
+ 
+Building target: MEASUREMENT_ECU_SLAVE.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,MEASUREMENT_ECU_SLAVE.map -mmcu=atmega32 -o "MEASUREMENT_ECU_SLAVE.elf"  ./LCD.o ./M_main.o ./SPI.o ./UART.o ./gpio.o ./pushButton.o ./timers.o   
+Finished building target: MEASUREMENT_ECU_SLAVE.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S MEASUREMENT_ECU_SLAVE.elf  >"MEASUREMENT_ECU_SLAVE.lss"
+Finished building: MEASUREMENT_ECU_SLAVE.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex MEASUREMENT_ECU_SLAVE.elf  "MEASUREMENT_ECU_SLAVE.hex"
+Finished building: MEASUREMENT_ECU_SLAVE.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 MEASUREMENT_ECU_SLAVE.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15494 bytes (47.3% Full)
+(.text + .data + .bootloader)
+
+Data:         95 bytes (4.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+00:04:20 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

@@ -1,0 +1,105 @@
+/*
+ * M_main.c
+ *
+ *  Created on: Feb 13, 2020
+ *      Author: Youssef Harby
+ */
+
+
+#include "gpio.h"
+#include "LCD.h"
+#include "pushButton.h"
+#include "SPI.h"
+#include "UART.h"
+#include "timers.h"
+#include <stdlib.h>
+
+uint8_t testing = 0;
+uint8_t currentSpeed = 0;
+uint8_t time = 0;
+uint16_t distance = 0;
+uint8_t flaaaag = 0;
+sint8_t str[5];
+char* ptr = str;
+
+
+void test(void)
+{
+	currentSpeed = SPI_receiveByte();
+	time++;
+	distance += currentSpeed;
+}
+
+int main(void)
+{
+	uint8_t value;
+
+	gpioPinDirection(GPIOC, BIT0 | BIT1, OUTPUT);
+
+	pushButtonInit(BTN_0);
+	pushButtonInit(BTN_1);
+
+	UART_ConfigType uart_configtype = {
+			UART_ASYNCHRONOUS_MODE,
+			UART_SENDER_MODE,
+			UART_EIGHT_BITS,
+			UART_PARITY_DISABLED,
+			UART_ONE_STOP_BIT,
+			UART_INTERRUPT_DISABLED
+	};
+
+	SPI_ConfigType spi_configtype = {
+			SPI_SLAVE,
+			SPI_INTERRUPT_ENABLED,
+			SPI_F_OSC_4
+	};
+
+	LCD_init();
+
+	UART_init(&uart_configtype);
+	SPI_init(&spi_configtype);
+
+	SPI_setCallBack(&test);
+
+	sei();
+
+	while(1)
+	{
+		if(pushButtonGetStatus(BTN_0) == Pressed)
+		{
+			time = 0;
+			distance = 0;
+			currentSpeed = 0;
+			while(pushButtonGetStatus(BTN_0) == Pressed);
+			gpioPinWrite(GPIOC, BIT0, HIGH);
+		}else if(pushButtonGetStatus(BTN_0) == Released)
+		{
+			gpioPinWrite(GPIOC, BIT0, LOW);
+		}
+
+		if(pushButtonGetStatus(BTN_1) == Pressed)
+		{
+			while(pushButtonGetStatus(BTN_1) == Pressed);
+			gpioPinWrite(GPIOC, BIT1, HIGH);
+
+            UART_Send_String("time = ");
+			UART_transmit(time + 48);
+			UART_transmit('\r');
+
+			UART_Send_String("distance = ");
+            value = (distance - ((time-1) * 48)) - 48;
+            itoa(value, ptr, 10);
+            UART_Send_String(str);
+			UART_transmit('\r');
+
+			UART_Send_String("speed = ");
+			itoa((currentSpeed - 48), str, 10);
+			UART_Send_String(str);
+			UART_transmit('\r');
+			UART_transmit('\r');
+		}else if(pushButtonGetStatus(BTN_1) == Released)
+		{
+			gpioPinWrite(GPIOC, BIT1, LOW);
+		}
+	}
+}

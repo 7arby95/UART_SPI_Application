@@ -1,0 +1,20 @@
+00:04:20 **** Incremental Build of configuration Debug for project VSE_ECU_MASTER ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 VSE_ECU_MASTER.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   15706 bytes (47.9% Full)
+(.text + .data + .bootloader)
+
+Data:         46 bytes (2.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+00:04:20 Build Finished. 0 errors, 0 warnings. (took 290ms)
+
